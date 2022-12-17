@@ -47,9 +47,5 @@ xtabs(~genre+year, data=read_1)
 
 ggplot(read_1,aes(x=genre,fill=genre)) + geom_bar() + scale_fill_viridis_d() + 
       labs(x = 'Genre', y = 'Number of Songs', title = "Genres of The Top Songs From 2010-2019") 
- 
-visual = plot(read_1)
 
-
-unique(read$top.genre)
 
