@@ -32,3 +32,11 @@ geom_histogram(aes(col = genre)) +
 facet_grid(~genre) + 
 labs(x = "BPM (Beats per Minute)", y = "Number of Songs", title = "BPM per Muisc Genre")
 ```
+![Rplot](https://user-images.githubusercontent.com/120809566/208265026-c2252300-f957-4d64-a7a7-e8bb009db160.png)
+
+```R
+ggplot(read_1, aes(x = as.integer(bpm), y = as.character(genre))) + 
+geom_boxplot(aes(col = genre)) + 
+labs(x = "BPM (Beats per Minute)", y = "Genre", title = "BPM Summary per Muisc Genre")
+```
+![Rplot01](https://user-images.githubusercontent.com/120809566/208265159-936d293c-9dae-4c9f-ba8e-93085818f33a.png)
