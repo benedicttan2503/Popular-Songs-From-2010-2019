@@ -1,7 +1,4 @@
 library(tidyverse)
-library(knitr)
-library(purrr)
-library(dplyr)
 read = read.csv('C:\\Users\\bened\\Downloads\\datacamp_workspace_export_2022-12-16 17_04_46.csv')
 read
 
