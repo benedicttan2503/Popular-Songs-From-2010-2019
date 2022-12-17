@@ -3,7 +3,7 @@ read = read.csv('C:\\Users\\bened\\Downloads\\datacamp_workspace_export_2022-12-
 read
 
 read_1 = read %>% mutate(genre = fct_collapse(read$top.genre,
-Pop           =   c('pop', 'dance pop', 'electropop', 'boy band','canadian pop', 'electropop', 'barbadian pop', 'art pop',
+Pop =             c('pop', 'dance pop', 'electropop', 'boy band','canadian pop', 'electropop', 'barbadian pop', 'art pop',
                   'dance pop',  'neo mellow', 'australian pop', 'indie pop', 'colombian pop', 'acoustic pop', 'baroque
                   pop', 'candy pop', 'folk-pop', 'alaska indie', 'metropopolis','danish pop', 'hollywood', 'irish
                   singer-songwriter', 'escape room'),
