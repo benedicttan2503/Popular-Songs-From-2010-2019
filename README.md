@@ -24,7 +24,7 @@ Hip_Hop =         c('detroit hip hop', 'hip pop', 'atl hip hop', 'chicago rap', 
 Latin =           c('canadian latin', 'latin'),
 Other =           c('contemporary country', 'celtic rock')))
 ```
-#Plotting Data
+# Plotting Data
 Used the ggplot2 library from tidyverse in R and plots from PowerBI to plot the data.
 ```R
 ggplot(read_1, aes(x = as.integer(bpm))) + 
