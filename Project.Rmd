@@ -1,0 +1,55 @@
+library(tidyverse)
+library(knitr)
+library(purrr)
+library(dplyr)
+read = read.csv('C:\\Users\\bened\\Downloads\\datacamp_workspace_export_2022-12-16 17_04_46.csv')
+read
+
+read_1 = read %>% mutate(genre = fct_collapse(read$top.genre,
+Pop           =   c('pop', 'dance pop', 'electropop', 'boy band','canadian pop', 'electropop', 'barbadian pop', 'art pop',
+                  'dance pop',  'neo mellow', 'australian pop', 'indie pop', 'colombian pop', 'acoustic pop', 'baroque
+                  pop', 'candy pop', 'folk-pop', 'alaska indie', 'metropopolis','danish pop', 'hollywood', 'irish
+                  singer-songwriter', 'escape room'),
+              
+Soul_RnB =        c('british soul', 'alternative r&b', 'canadian contemporary r&b'),
+
+Techno_House =    c('big room', 'electro', 'complextro', 'house', 'australian dance', 'belgian edm', 'brostep',
+                  'downtempo', 'edm', 'electro house', 'electronic trap', 'tropical house'), 
+                  
+Hip_Hop =         c('detroit hip hop', 'hip pop', 'atl hip hop', 'chicago rap', 'canadian hip hop', 'australian hip hop', 'hip hop'),
+Latin =           c('canadian latin', 'latin'),
+Other =           c('contemporary country', 'celtic rock')))
+
+read_1
+
+ggplot(read_1, aes(x = as.integer(bpm))) + 
+geom_histogram(aes(col = genre)) + 
+facet_grid(~genre) + 
+labs(x = "BPM (Beats per Minute)", y = "Number of Songs", title = "BPM per Muisc Genre")
+
+ggplot(read_1, aes(x = as.integer(bpm), y = as.character(genre))) + 
+geom_boxplot(aes(col = genre)) + 
+labs(x = "BPM (Beats per Minute)", y = "Genre", title = "BPM Summary per Muisc Genre")
+
+ggplot(read_1,aes(x=as.integer(year),fill=genre)) +
+ geom_bar() + scale_fill_viridis_d() + labs(x = "Year", y = "Number of Songs", title = "Proportion of Songs per Year")
+
+ggplot(read_1, aes(x = as.integer(year), y = as.integer(bpm))) +
+geom_point(aes(col = genre)) + 
+labs(x = "Year", y = "BPM (Beats per Minute)", title = "BPM distribution per Year")
+
+ggplot(read_1,aes(x="",y="", fill=genre)) + 
+geom_bar(stat="identity") + coord_polar("y",start=0) + 
+theme(axis.title.y =element_blank(), axis.text.y =element_blank(), axis.ticks.y=element_blank()) + 
+labs(title = "Genres of The Top Songs From 2010-2019")
+
+xtabs(~genre+year, data=read_1)
+
+ggplot(read_1,aes(x=genre,fill=genre)) + geom_bar() + scale_fill_viridis_d() + 
+      labs(x = 'Genre', y = 'Number of Songs', title = "Genres of The Top Songs From 2010-2019") 
+ 
+visual = plot(read_1)
+
+
+unique(read$top.genre)
+
