@@ -64,7 +64,7 @@ labs(x = 'Genre', y = 'Number of Songs', title = "Genres of The Top Songs From 2
 ```
 ![Rplot04](https://user-images.githubusercontent.com/120809566/208265464-da7d4115-23ca-4736-a8d4-9e504fac0c26.png)
 
-# PowerBI Plots With The R Plots, and the Summary of Each Analaysis
+# PowerBI Plots With the R Plots, and the Summary of Each Analaysis
 ![Analysis of Popular Songs From 2010 - 2019-1](https://user-images.githubusercontent.com/120809566/208265542-ecf8fb15-85ac-41ce-bcfd-bdce80acb02b.png)
 ![Analysis of Popular Songs From 2010 - 2019-3](https://user-images.githubusercontent.com/120809566/208265543-b437a70f-b214-40bf-81a7-be2ad94e8cc9.png)
 ![Analysis of Popular Songs From 2010 - 2019-2](https://user-images.githubusercontent.com/120809566/208265547-02bc2ae8-17be-4cbf-9464-632e785e0926.png)
